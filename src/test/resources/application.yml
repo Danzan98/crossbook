@@ -1,0 +1,14 @@
+server.port: 8090
+
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:12.0:///
+    username: sa
+    password:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+  hikari:
+    connection-timeout: 20000
+    maximum-pool-size: 10
+  jpa:
+    database: POSTGRESQL
+  liquibase.change-log: classpath:db/changelog-master.yml
